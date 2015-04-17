@@ -1188,9 +1188,9 @@ LogbookDialog::LogbookDialog(wxWindow* parent, wxWindowID id, const wxString& ti
 
 	
 
-	owenerZip = new wxTextCtrl( m_panel72, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize( 150,-1 ), 0 );
+	ownerZip = new wxTextCtrl( m_panel72, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize( 150,-1 ), 0 );
 
-	fgSizer39->Add( owenerZip, 0, wxALL, 5 );
+	fgSizer39->Add( ownerZip, 0, wxALL, 5 );
 
 	
 

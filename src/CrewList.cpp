@@ -1898,13 +1898,73 @@ void CrewList::saveHTML(wxString savePath, wxString layout, bool mode)
 	topHTML.Replace(wxT("#CALLSIGN#"),Export::replaceNewLine(mode,dialog->callsign->GetValue(),false));
 	topHTML.Replace(wxT("#REGISTRATION#"),Export::replaceNewLine(mode,dialog->registration->GetValue(),false));
 
+	topHTML.Replace(wxT("#HIN#"),Export::replaceNewLine(mode,dialog->hin->GetValue(),false));
+	topHTML.Replace(wxT("#SAILNO#"),Export::replaceNewLine(mode,dialog->sailno->GetValue(),false));
+	topHTML.Replace(wxT("#INSURANCE#"),Export::replaceNewLine(mode,dialog->insurance->GetValue(),false));
+	topHTML.Replace(wxT("#POLICY#"),Export::replaceNewLine(mode,dialog->policy->GetValue(),false));
+	topHTML.Replace(wxT("#MMSI#"),Export::replaceNewLine(mode,dialog->mmsi->GetValue(),false));
+	topHTML.Replace(wxT("#ONAME#"),Export::replaceNewLine(mode,dialog->ownerName->GetValue(),false));
+	topHTML.Replace(wxT("#OFIRST#"),Export::replaceNewLine(mode,dialog->ownerFirstname->GetValue(),false));
+	topHTML.Replace(wxT("#TELEPHONE#"),Export::replaceNewLine(mode,dialog->ownerPhone->GetValue(),false));
+	topHTML.Replace(wxT("#STREET#"),Export::replaceNewLine(mode,dialog->ownerStreet->GetValue(),false));
+	topHTML.Replace(wxT("#ZIP#"),Export::replaceNewLine(mode,dialog->ownerZip->GetValue(),false));
+	topHTML.Replace(wxT("#TOWN#"),Export::replaceNewLine(mode,dialog->ownerTown->GetValue(),false));
+	topHTML.Replace(wxT("#TYPE#"),Export::replaceNewLine(mode,dialog->boatType->GetValue(),false));
+	topHTML.Replace(wxT("#BUILDER#"),Export::replaceNewLine(mode,dialog->builder->GetValue(),false));
+	topHTML.Replace(wxT("#HULL#"),Export::replaceNewLine(mode,dialog->hull->GetValue(),false));
+        topHTML.Replace(wxT("#LAUNCHED#"),Export::replaceNewLine(mode,dialog->launched->GetValue(), true);
+	topHTML.Replace(wxT("#YARDNO#"),Export::replaceNewLine(mode,dialog->yardNr->GetValue(),false));
+	topHTML.Replace(wxT("#DESIGNER#"),Export::replaceNewLine(mode,dialog->designer->GetValue(),false));
+	topHTML.Replace(wxT("#CONSTRUCT#"),Export::replaceNewLine(mode,dialog->construction->GetValue(),false));
+	topHTML.Replace(wxT("#LOA#"),Export::replaceNewLine(mode,dialog->LOA->GetValue(),false));
+	topHTML.Replace(wxT("#LOD#"),Export::replaceNewLine(mode,dialog->LOD->GetValue(),false));
+	topHTML.Replace(wxT("#LWL#"),Export::replaceNewLine(mode,dialog->LWL->GetValue(),false));				
+	topHTML.Replace(wxT("#BEAM#"),Export::replaceNewLine(mode,dialog->beam->GetValue(),false));				
+	topHTML.Replace(wxT("#DRAFT#"),Export::replaceNewLine(mode,dialog->draft->GetValue(),false));
+	topHTML.Replace(wxT("#USER1#"),Export::replaceNewLine(mode,dialog->Userfield1->GetValue(),false));
+	topHTML.Replace(wxT("#USER2#"),Export::replaceNewLine(mode,dialog->Userfield2->GetValue(),false));
+	topHTML.Replace(wxT("#USER3#"),Export::replaceNewLine(mode,dialog->Userfield3->GetValue(),false));
+	topHTML.Replace(wxT("#DISPL#"),Export::replaceNewLine(mode,dialog->displacement->GetValue(),false));				
+        
+        
+        
+        
 	topHTML.Replace(wxT("#LTYPE#"),Export::replaceNewLine(mode,dialog->m_staticText128->GetLabel(),true));
 	topHTML.Replace(wxT("#LBOATNAME#"),Export::replaceNewLine(mode,dialog->bname->GetLabel(),true));
 	topHTML.Replace(wxT("#LHOMEPORT#"),Export::replaceNewLine(mode,dialog->m_staticText114->GetLabel(),true));
 	topHTML.Replace(wxT("#LCALLSIGN#"),Export::replaceNewLine(mode,dialog->m_staticText115->GetLabel(),true));
 	topHTML.Replace(wxT("#LREGISTRATION#"),Export::replaceNewLine(mode,dialog->m_staticText118->GetLabel(),true));
 	topHTML.Replace(wxT("#LCREWLIST#"),Export::replaceNewLine(mode,dialog->m_logbook->GetPageText(2),true));
+     
+	topHTML.Replace(wxT("#LHIN#"),Export::replaceNewLine(mode,dialog->m_staticText116->GetLabel(),true));
+	topHTML.Replace(wxT("#LSAILNO#"),Export::replaceNewLine(mode,dialog->m_staticText117->GetLabel(),true));
+	topHTML.Replace(wxT("#LINSURANCE#"),Export::replaceNewLine(mode,dialog->m_staticText119->GetLabel(), true);
+	topHTML.Replace(wxT("#LPOLICY#"),Export::replaceNewLine(mode,dialog->m_staticText120->GetLabel(), true);
+	topHTML.Replace(wxT("#LMMSI#"),Export::replaceNewLine(mode,dialog->m_staticText53->GetLabel(), true);
+	topHTML.Replace(wxT("#LONAME#"),Export::replaceNewLine(mode,dialog->m_staticText90->GetLabel(), true);
+	topHTML.Replace(wxT("#LOFIRST#"),Export::replaceNewLine(mode,dialog->m_staticText91->GetLabel(), true);
+	topHTML.Replace(wxT("#LTELEPHONE#"),Export::replaceNewLine(mode,dialog->m_staticText95->GetLabel(), true);
+	topHTML.Replace(wxT("#LSTREET#"),Export::replaceNewLine(mode,dialog->m_staticText92->GetLabel(), true);
+	topHTML.Replace(wxT("#LZIP#"),Export::replaceNewLine(mode,dialog->m_staticText93->GetLabel(), true);
+	topHTML.Replace(wxT("#LTOWN#"),Export::replaceNewLine(mode,dialog->m_staticText94->GetLabel(), true);
+	topHTML.Replace(wxT("#LTYPE#"),Export::replaceNewLine(mode,dialog->m_staticText128->GetLabel(), true);
+	topHTML.Replace(wxT("#LBUILDER#"),Export::replaceNewLine(mode,dialog->m_staticText125->GetLabel(), true);
+	topHTML.Replace(wxT("#LHULL#"),Export::replaceNewLine(mode,dialog->m_staticText124->GetLabel(), true);
+	topHTML.Replace(wxT("#LLAUNCHED#"),Export::replaceNewLine(mode,dialog->m_staticText126->GetLabel(), true);
+	topHTML.Replace(wxT("#LYARDNO#"),Export::replaceNewLine(mode,dialog->m_staticText127->GetLabel(), true);
+	topHTML.Replace(wxT("#LDESIGNER#"),Export::replaceNewLine(mode,dialog->m_staticText123->GetLabel(), true);
+	topHTML.Replace(wxT("#LCONSTRUCT#"),Export::replaceNewLine(mode,dialog->m_staticText129->GetLabel(), true);
+	topHTML.Replace(wxT("#LLOA#"),Export::replaceNewLine(mode,dialog->m_staticText106->GetLabel(), true);
+	topHTML.Replace(wxT("#LLOD#"),Export::replaceNewLine(mode,dialog->m_staticText107->GetLabel(), true);
+	topHTML.Replace(wxT("#LLWL#"),Export::replaceNewLine(mode,dialog->m_staticText108->GetLabel(), true);
+	topHTML.Replace(wxT("#LBEAM#"),Export::replaceNewLine(mode,dialog->m_staticText109->GetLabel(), true);
+	topHTML.Replace(wxT("#LDRAFT#"),Export::replaceNewLine(mode,dialog->m_staticText110->GetLabel(), true);
+	topHTML.Replace(wxT("#LUSER1#"),Export::replaceNewLine(mode,dialog->UserLabel1->GetValue(), true);
+	topHTML.Replace(wxT("#LUSER2#"),Export::replaceNewLine(mode,dialog->UserLabel2->GetValue(), true);
+	topHTML.Replace(wxT("#LUSER3#"),Export::replaceNewLine(mode,dialog->UserLabel3->GetValue(), true);
+	topHTML.Replace(wxT("#LDISPL#"),Export::replaceNewLine(mode,dialog->m_staticText122->GetLabel(), true);
 
+        
 	if(html.Contains(_T("<!--Repeat -->")))
 	{	
 		htmlFile << topHTML;
@@ -2264,13 +2324,77 @@ void CrewList::saveODT(wxString savePath,wxString layout, bool mode)
 	topODT.Replace(wxT("#CALLSIGN#"),Export::replaceNewLine(mode,dialog->callsign->GetValue(),false));
 	topODT.Replace(wxT("#REGISTRATION#"),Export::replaceNewLine(mode,dialog->registration->GetValue(),false));
 
+	topODT.Replace(wxT("#HIN#"),Export::replaceNewLine(mode,dialog->hin->GetValue(),false));
+	topODT.Replace(wxT("#SAILNO#"),Export::replaceNewLine(mode,dialog->sailno->GetValue(),false));
+	topODT.Replace(wxT("#INSURANCE#"),Export::replaceNewLine(mode,dialog->insurance->GetValue(),false));
+	topODT.Replace(wxT("#POLICY#"),Export::replaceNewLine(mode,dialog->policy->GetValue(),false));
+	topODT.Replace(wxT("#MMSI#"),Export::replaceNewLine(mode,dialog->mmsi->GetValue(),false));
+	topODT.Replace(wxT("#ONAME#"),Export::replaceNewLine(mode,dialog->ownerName->GetValue(),false));
+	topODT.Replace(wxT("#OFIRST#"),Export::replaceNewLine(mode,dialog->ownerFirstname->GetValue(),false));
+	topODT.Replace(wxT("#TELEPHONE#"),Export::replaceNewLine(mode,dialog->ownerPhone->GetValue(),false));
+	topODT.Replace(wxT("#STREET#"),Export::replaceNewLine(mode,dialog->ownerStreet->GetValue(),false));
+	topODT.Replace(wxT("#ZIP#"),Export::replaceNewLine(mode,dialog->ownerZip->GetValue(),false));
+	topODT.Replace(wxT("#TOWN#"),Export::replaceNewLine(mode,dialog->ownerTown->GetValue(),false));
+	topODT.Replace(wxT("#TYPE#"),Export::replaceNewLine(mode,dialog->boatType->GetValue(),false));
+	topODT.Replace(wxT("#BUILDER#"),Export::replaceNewLine(mode,dialog->builder->GetValue(),false));
+	topODT.Replace(wxT("#HULL#"),Export::replaceNewLine(mode,dialog->hull->GetValue(),false));
+        topODT.Replace(wxT("#LAUNCHED#"),Export::replaceNewLine(mode,dialog->launched->GetValue(), true);
+	topODT.Replace(wxT("#YARDNO#"),Export::replaceNewLine(mode,dialog->yardNr->GetValue(),false));
+	topODT.Replace(wxT("#DESIGNER#"),Export::replaceNewLine(mode,dialog->designer->GetValue(),false));
+	topODT.Replace(wxT("#CONSTRUCT#"),Export::replaceNewLine(mode,dialog->construction->GetValue(),false));
+	topODT.Replace(wxT("#LOA#"),Export::replaceNewLine(mode,dialog->LOA->GetValue(),false));
+	topODT.Replace(wxT("#LOD#"),Export::replaceNewLine(mode,dialog->LOD->GetValue(),false));
+	topODT.Replace(wxT("#LWL#"),Export::replaceNewLine(mode,dialog->LWL->GetValue(),false));				
+	topODT.Replace(wxT("#BEAM#"),Export::replaceNewLine(mode,dialog->beam->GetValue(),false));				
+	topODT.Replace(wxT("#DRAFT#"),Export::replaceNewLine(mode,dialog->draft->GetValue(),false));
+	topODT.Replace(wxT("#USER1#"),Export::replaceNewLine(mode,dialog->Userfield1->GetValue(),false));
+	topODT.Replace(wxT("#USER2#"),Export::replaceNewLine(mode,dialog->Userfield2->GetValue(),false));
+	topODT.Replace(wxT("#USER3#"),Export::replaceNewLine(mode,dialog->Userfield3->GetValue(),false));
+	topODT.Replace(wxT("#DISPL#"),Export::replaceNewLine(mode,dialog->displacement->GetValue(),false));				
+        
+  
+        
+        
 	topODT.Replace(wxT("#LTYPE#"),Export::replaceNewLine(mode,dialog->m_staticText128->GetLabel(),true));
 	topODT.Replace(wxT("#LBOATNAME#"),Export::replaceNewLine(mode,dialog->bname->GetLabel(),true));
 	topODT.Replace(wxT("#LHOMEPORT#"),Export::replaceNewLine(mode,dialog->m_staticText114->GetLabel(),true));
 	topODT.Replace(wxT("#LCALLSIGN#"),Export::replaceNewLine(mode,dialog->m_staticText115->GetLabel(),true));
 	topODT.Replace(wxT("#LREGISTRATION#"),Export::replaceNewLine(mode,dialog->m_staticText118->GetLabel(),true));
-	topODT.Replace(wxT("#LCREWLIST#"),Export::replaceNewLine(mode,dialog->m_logbook->GetPageText(2),true));
+	topODT.Replace(wxT("#LCREWLIST#"),Export::replaceNewLine(mode,dialog->m_logbook->GetPageText(2),true));   
+        
+	topODT.Replace(wxT("#LHIN#"),Export::replaceNewLine(mode,dialog->m_staticText116->GetLabel(),true));
+	topODT.Replace(wxT("#LSAILNO#"),Export::replaceNewLine(mode,dialog->m_staticText117->GetLabel(),true));
+	topODT.Replace(wxT("#LINSURANCE#"),Export::replaceNewLine(mode,dialog->m_staticText119->GetLabel(), true);
+	topODT.Replace(wxT("#LPOLICY#"),Export::replaceNewLine(mode,dialog->m_staticText120->GetLabel(), true);
+	topODT.Replace(wxT("#LMMSI#"),Export::replaceNewLine(mode,dialog->m_staticText53->GetLabel(), true);
+	topODT.Replace(wxT("#LONAME#"),Export::replaceNewLine(mode,dialog->m_staticText90->GetLabel(), true);
+	topODT.Replace(wxT("#LOFIRST#"),Export::replaceNewLine(mode,dialog->m_staticText91->GetLabel(), true);
+	topODT.Replace(wxT("#LTELEPHONE#"),Export::replaceNewLine(mode,dialog->m_staticText95->GetLabel(), true);
+	topODT.Replace(wxT("#LSTREET#"),Export::replaceNewLine(mode,dialog->m_staticText92->GetLabel(), true);
+	topODT.Replace(wxT("#LZIP#"),Export::replaceNewLine(mode,dialog->m_staticText93->GetLabel(), true);
+	topODT.Replace(wxT("#LTOWN#"),Export::replaceNewLine(mode,dialog->m_staticText94->GetLabel(), true);
+	topODT.Replace(wxT("#LTYPE#"),Export::replaceNewLine(mode,dialog->m_staticText128->GetLabel(), true);
+	topODT.Replace(wxT("#LBUILDER#"),Export::replaceNewLine(mode,dialog->m_staticText125->GetLabel(), true);
+	topODT.Replace(wxT("#LHULL#"),Export::replaceNewLine(mode,dialog->m_staticText124->GetLabel(), true);
+	topODT.Replace(wxT("#LLAUNCHED#"),Export::replaceNewLine(mode,dialog->m_staticText126->GetLabel(), true);
+	topODT.Replace(wxT("#LYARDNO#"),Export::replaceNewLine(mode,dialog->m_staticText127->GetLabel(), true);
+	topODT.Replace(wxT("#LDESIGNER#"),Export::replaceNewLine(mode,dialog->m_staticText123->GetLabel(), true);
+	topODT.Replace(wxT("#LCONSTRUCT#"),Export::replaceNewLine(mode,dialog->m_staticText129->GetLabel(), true);
+	topODT.Replace(wxT("#LLOA#"),Export::replaceNewLine(mode,dialog->m_staticText106->GetLabel(), true);
+	topODT.Replace(wxT("#LLOD#"),Export::replaceNewLine(mode,dialog->m_staticText107->GetLabel(), true);
+	topODT.Replace(wxT("#LLWL#"),Export::replaceNewLine(mode,dialog->m_staticText108->GetLabel(), true);
+	topODT.Replace(wxT("#LBEAM#"),Export::replaceNewLine(mode,dialog->m_staticText109->GetLabel(), true);
+	topODT.Replace(wxT("#LDRAFT#"),Export::replaceNewLine(mode,dialog->m_staticText110->GetLabel(), true);
+	topODT.Replace(wxT("#LUSER1#"),Export::replaceNewLine(mode,dialog->UserLabel1->GetValue(), true);
+	topODT.Replace(wxT("#LUSER2#"),Export::replaceNewLine(mode,dialog->UserLabel2->GetValue(), true);
+	topODT.Replace(wxT("#LUSER3#"),Export::replaceNewLine(mode,dialog->UserLabel3->GetValue(), true);
+	topODT.Replace(wxT("#LDISPL#"),Export::replaceNewLine(mode,dialog->m_staticText122->GetLabel(), true);
 
+        
+        
+        
+        
+        
 	path = data_locn;
 	wxTextFile *logFile = new wxTextFile(path);
 	if(mode != 0)

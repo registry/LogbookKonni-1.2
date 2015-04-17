@@ -1362,8 +1362,8 @@ LogbookDialog::LogbookDialog(logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt, 
 	m_staticText93->Wrap( -1 );
 	fgSizer39->Add( m_staticText93, 0, wxALL, 5 );
 	
-	owenerZip = new wxTextCtrl( m_panel72, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize( 150,-1 ), 0 );
-	fgSizer39->Add( owenerZip, 0, wxALL, 5 );
+	ownerZip = new wxTextCtrl( m_panel72, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize( 150,-1 ), 0 );
+	fgSizer39->Add( ownerZip, 0, wxALL, 5 );
 
 	m_staticText94 = new wxStaticText( m_panel72, wxID_ANY, _("Town"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText94->Wrap( -1 );

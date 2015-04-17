@@ -222,6 +222,7 @@ enum grids  {LOGBOOK,OVERVIEW,CREW,BOAT,GSERVICE,GREPAIRS,GBUYPARTS};
 		wxSplitterWindow* m_splitter1;
 		wxPanel* m_panel72;
 		wxStaticText* bname;
+                
 		wxTextCtrl* boatName;
 		wxStaticText* m_staticText114;
 		wxTextCtrl* homeport;
@@ -248,7 +249,7 @@ enum grids  {LOGBOOK,OVERVIEW,CREW,BOAT,GSERVICE,GREPAIRS,GBUYPARTS};
 		wxStaticText* m_staticText92;
 		wxTextCtrl* ownerStreet;
 		wxStaticText* m_staticText93;
-		wxTextCtrl* owenerZip;
+		wxTextCtrl* ownerZip;
 		wxStaticText* m_staticText94;
 		wxTextCtrl* ownerTown;
 		wxStaticText* m_staticText128;
